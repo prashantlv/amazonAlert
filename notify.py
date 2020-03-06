@@ -27,7 +27,7 @@ def send_mail():
     server.ehlo()
 
     server.login('sender@mail', 'password')         # need to allow less secure app for google
-    subject = 'Price fell down below 400 !!!'
+    subject = 'Price fell down below Rs.400 !!!'
     body = 'Check this out, Hurry !!!  link https://www.amazon.in/boAt-BassHeads-100-Headphones-Black/dp/B071Z8M4KX/ref=sr_1_4?keywords=boat&qid=1582823584&sr=8-4'
 
     msg = f"Subject: {subject}\n\n {body}"
