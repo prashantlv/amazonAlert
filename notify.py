@@ -38,7 +38,8 @@ def send_mail():
         msg
     )
 
-    print('Email has been sent.')
+    print("Email has been sent successfully.")
+    print("Hurry !!! check your wishlist now. ")
 
     server.quit()
 
