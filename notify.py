@@ -7,7 +7,7 @@ url = 'https://www.amazon.in/boAt-BassHeads-100-Headphones-Black/dp/B071Z8M4KX/r
 headers = {
     "User-Agent": 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
 }
-
+dprice = 500
 def check_price():
     page = requests.get(url, headers = headers)
     soup = BeautifulSoup(page.content, 'html.parser')
@@ -15,7 +15,7 @@ def check_price():
     price = soup.find(id='priceblock_ourprice').get_text()
     converted_price = float(price[2:5])
 
-    if converted_price < 400:
+    if converted_price < dprice :
         send_mail()
     print(converted_price)
     print(title.strip())
